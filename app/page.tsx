@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Bot, Table2, Rocket, ArrowRight, ShieldCheck, Zap, Clock } from 'lucide-react';
+import { Download, Bot, Table2, Rocket, ArrowRight, ShieldCheck, Zap, Clock, AlertTriangle } from 'lucide-react';
 
 export default function Home() {
   return (
@@ -12,10 +12,10 @@ export default function Home() {
             <Rocket size={16} />
             <span>Phiên bản 1.1 mới nhất</span>
           </div>
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
-            Tự động hóa báo cáo <br className="hidden md:block" />
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
+            Tải Tồn đọng lấy - giao - trả và <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-              GHN Nhanh Chóng
+              Tồn đọng luân chuyển theo khung giờ
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -28,6 +28,13 @@ export default function Home() {
             <a href="#features" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border-2 border-slate-200 hover:border-slate-300 text-slate-700 rounded-lg font-semibold transition-colors w-full sm:w-auto">
               Tìm hiểu thêm
             </a>
+          </div>
+
+          <div className="mt-8 max-w-xl mx-auto bg-amber-50 border border-amber-200 text-amber-800 px-5 py-4 rounded-xl flex items-start gap-3 text-left shadow-sm">
+            <AlertTriangle className="shrink-0 mt-0.5 text-amber-600" size={22} />
+            <p className="text-sm md:text-base leading-relaxed">
+              <strong>Lưu ý quan trọng:</strong> Trình duyệt Chrome của bạn cần phải <strong>được mở</strong> (có thể thu nhỏ hoặc để tab khác) thì tiện ích mới có thể tự động chạy đúng theo khung giờ bạn đã cài.
+            </p>
           </div>
         </div>
       </section>
