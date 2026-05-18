@@ -82,7 +82,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold">Cài đặt Chrome Extension</h3>
               </div>
               <ol className="list-decimal pl-5 space-y-4 text-slate-700 text-lg">
-                <li>Tải xuống file <code className="bg-slate-200 px-2 py-1 rounded text-sm font-mono text-orange-600">GHN_Auto_Export_Extension.zip</code></li>
+                <li>Tải xuống file <code className="bg-slate-200 px-2 py-1 rounded text-sm font-mono text-orange-600">ghn_extension.zip</code></li>
                 <li>Giải nén file vào một thư mục cố định trên máy tính của bạn</li>
                 <li>Mở Google Chrome, truy cập vào đường dẫn <code className="bg-slate-200 px-2 py-1 rounded text-sm text-blue-600">chrome://extensions/</code></li>
                 <li>Bật chế độ <strong>Developer mode</strong> (Chế độ dành cho nhà phát triển) ở góc trên bên phải</li>
