@@ -19,7 +19,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Công cụ mạnh mẽ kết hợp Chrome Extension và Telegram Bot để tự động trích xuất dữ liệu, đẩy lên Google Sheets mà không cần thao tác thủ công mỗi ngày.
+            Tiện ích mở rộng Chrome thông minh giúp bạn tự động hóa việc xuất báo cáo GHN theo lịch trình tự chọn. Dữ liệu sẽ tự động được gửi về Telegram của bạn qua GHN Bot.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a href="#install" className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white rounded-lg font-semibold transition-colors w-full sm:w-auto">
@@ -45,29 +45,22 @@ export default function Home() {
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
                 <Clock size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Lên lịch tải tự động</h3>
-              <p className="text-slate-600">Extension tích hợp tính năng Alarm (10:00, 15:00, 23:55) tự động mở báo cáo và click nút Tải Xuống mà bạn không cần phải canh giờ.</p>
+              <h3 className="text-xl font-bold mb-3">Tùy chỉnh lịch chạy tự động</h3>
+              <p className="text-slate-600">Thêm, xóa và quản lý các mốc thời gian xuất báo cáo dễ dàng ngay trên giao diện Popup. Đến giờ, hệ thống sẽ tự động lấy dữ liệu mà bạn không cần phải canh.</p>
             </div>
             <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mb-6">
-                <Bot size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Telegram Bot Lắng nghe</h3>
-              <p className="text-slate-600">Bot chạy ngầm luôn sẵn sàng bắt link tải từ GHN.</p>
-            </div>
-            <div className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <Table2 size={24} />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Đồng bộ Google Sheets</h3>
-              <p className="text-slate-600">Dữ liệu được bóc tách và đẩy lên GSheets realtime.</p>
-            </div>
-            <div className="md:col-span-2 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-orange-100 text-orange-600 rounded-xl flex items-center justify-center mb-6">
                 <Zap size={24} />
               </div>
-              <h3 className="text-xl font-bold mb-3">Xử lý ngầm hiệu suất cao</h3>
-              <p className="text-slate-600">Sử dụng Telethon và kỹ thuật xử lý luồng thông minh, chỉ mất chưa tới 5 giây để bóc tách một file Excel nặng hàng nghìn dòng.</p>
+              <h3 className="text-xl font-bold mb-3">Kích hoạt xuất ngay</h3>
+              <p className="text-slate-600">Cần dữ liệu gấp? Chỉ một nút bấm "Kích hoạt xuất ngay" để khởi chạy ngay lập tức.</p>
+            </div>
+            <div className="md:col-span-3 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+              <div className="w-12 h-12 bg-blue-100 text-blue-500 rounded-xl flex items-center justify-center mb-6">
+                <Bot size={24} />
+              </div>
+              <h3 className="text-xl font-bold mb-3">Nhận dữ liệu qua Telegram GHN Bot</h3>
+              <p className="text-slate-600">Ngay sau khi tự động tải xuống, báo cáo sẽ được hệ thống trả thẳng về Telegram của bạn thông qua GHN Bot, sẵn sàng để sử dụng mọi lúc mọi nơi.</p>
             </div>
           </div>
         </div>
@@ -81,51 +74,21 @@ export default function Home() {
             <p className="text-slate-600">Làm theo 2 bước đơn giản dưới đây để tự động hóa hoàn toàn</p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-12 max-w-2xl mx-auto">
             {/* Step 1 */}
-            <div className="relative pl-8 md:pl-0">
-              <div className="hidden md:block absolute left-[50%] top-0 bottom-0 w-px bg-slate-200 -translate-x-1/2"></div>
-              
-              <div className="md:flex items-center justify-between gap-8 w-full">
-                <div className="md:w-1/2 md:text-right mb-8 md:mb-0">
-                  <h3 className="text-2xl font-bold mb-2">Bước 1: Cài đặt Chrome Extension</h3>
-                  <p className="text-slate-600">Cài đặt công cụ tự động tải báo cáo trên trình duyệt của bạn.</p>
-                </div>
-                <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-orange-500 rounded-full border-4 border-white -translate-x-1/2 flex items-center justify-center text-white font-bold text-sm z-10">1</div>
-                <div className="md:w-1/2 bg-slate-50 p-6 rounded-xl border border-slate-200">
-                  <ol className="list-decimal pl-4 space-y-3 text-slate-700">
-                    <li>Tải xuống file <code className="bg-slate-200 px-1 py-0.5 rounded text-sm">GHN_Auto_Export_Extension.zip</code></li>
-                    <li>Giải nén file vào một thư mục trên máy</li>
-                    <li>Mở Chrome, truy cập <code className="bg-slate-200 px-1 py-0.5 rounded text-sm text-blue-600">chrome://extensions/</code></li>
-                    <li>Bật <strong>Developer mode</strong> ở góc trên bên phải</li>
-                    <li>Nhấn <strong>Load unpacked</strong> và chọn thư mục vừa giải nén</li>
-                  </ol>
-                </div>
+            <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                <h3 className="text-2xl font-bold">Cài đặt Chrome Extension</h3>
               </div>
-            </div>
-
-            {/* Step 2 */}
-            <div className="relative pl-8 md:pl-0">
-              <div className="md:flex items-center justify-between gap-8 w-full flex-row-reverse">
-                <div className="md:w-1/2 mb-8 md:mb-0">
-                  <h3 className="text-2xl font-bold mb-2">Bước 2: Khởi chạy Telegram Bot</h3>
-                  <p className="text-slate-600">Chạy script Python để lắng nghe file Excel gửi về.</p>
-                </div>
-                <div className="absolute left-0 md:left-1/2 w-8 h-8 bg-orange-500 rounded-full border-4 border-white -translate-x-1/2 flex items-center justify-center text-white font-bold text-sm z-10">2</div>
-                <div className="md:w-1/2 bg-slate-50 p-6 rounded-xl border border-slate-200 text-left">
-                  <p className="text-sm font-semibold mb-3">Tạo file .env chứa thông tin:</p>
-                  <pre className="bg-slate-800 text-slate-100 p-4 rounded-lg text-sm overflow-x-auto mb-4">
-<code>TELEGRAM_API_ID=your_api_id
-TELEGRAM_API_HASH=your_api_hash
-WEB_APP_URL=your_google_script_url</code>
-                  </pre>
-                  <p className="text-sm font-semibold mb-3">Chạy lệnh khởi động:</p>
-                  <pre className="bg-slate-800 text-slate-100 p-4 rounded-lg text-sm overflow-x-auto">
-<code>pip install -r requirements.txt
-python main.py</code>
-                  </pre>
-                </div>
-              </div>
+              <ol className="list-decimal pl-5 space-y-4 text-slate-700 text-lg">
+                <li>Tải xuống file <code className="bg-slate-200 px-2 py-1 rounded text-sm font-mono text-orange-600">GHN_Auto_Export_Extension.zip</code></li>
+                <li>Giải nén file vào một thư mục cố định trên máy tính của bạn</li>
+                <li>Mở Google Chrome, truy cập vào đường dẫn <code className="bg-slate-200 px-2 py-1 rounded text-sm text-blue-600">chrome://extensions/</code></li>
+                <li>Bật chế độ <strong>Developer mode</strong> (Chế độ dành cho nhà phát triển) ở góc trên bên phải</li>
+                <li>Nhấn nút <strong>Load unpacked</strong> (Tải tiện ích đã giải nén) và chọn thư mục vừa giải nén</li>
+                <li>Ghim (Pin) tiện ích lên thanh công cụ để dễ dàng mở và cài đặt lịch chạy!</li>
+              </ol>
             </div>
           </div>
         </div>
