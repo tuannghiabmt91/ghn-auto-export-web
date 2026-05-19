@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "GHN Auto Export - Báo Cáo Tự Động",
-  description: "Công cụ tự động tải và đồng bộ báo cáo nội bộ GHN lên Google Sheets qua Telegram Bot",
+  title: "GHN Auto Export",
+  description: "Công cụ hỗ trợ tự động xuất báo cáo Tồn đọng Lấy-Giao-Trả và Tồn đọng Luân chuyển theo khung giờ",
 };
 
 export default function RootLayout({
