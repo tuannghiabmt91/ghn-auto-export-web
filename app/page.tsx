@@ -13,9 +13,9 @@ export default function Home() {
             <span>Phiên bản 1.1 mới nhất</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-8 leading-tight">
-            Tải Tồn đọng lấy - giao - trả và <br className="hidden md:block" />
+            GHN Auto Export <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-600">
-              Tồn đọng luân chuyển theo khung giờ
+              Tồn đọng lấy - giao - trả & Luân chuyển
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -33,7 +33,7 @@ export default function Home() {
           <div className="mt-8 max-w-xl mx-auto bg-amber-50 border border-amber-200 text-amber-800 px-5 py-4 rounded-xl flex items-start gap-3 text-left shadow-sm">
             <AlertTriangle className="shrink-0 mt-0.5 text-amber-600" size={22} />
             <p className="text-sm md:text-base leading-relaxed">
-              <strong>Lưu ý quan trọng:</strong> Trình duyệt Chrome của bạn cần phải <strong>được mở</strong> (có thể thu nhỏ hoặc để tab khác) thì tiện ích mới có thể tự động chạy đúng theo khung giờ bạn đã cài.
+              <strong>Lưu ý quan trọng:</strong> Trình duyệt Chrome của bạn cần phải <strong>được mở</strong> (có thể thu nhỏ hoặc để tab khác) thì tiện ích mới có thể tự động chạy đúng theo khung giờ bạn đã cài đặt.
             </p>
           </div>
         </div>
@@ -44,9 +44,9 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Tính năng nổi bật</h2>
-            <p className="text-slate-600">Được thiết kế để tối ưu hóa quy trình làm việc của Area Manager</p>
+            <p className="text-slate-600">Được thiết kế để hỗ trợ đội ngũ Vận Hành</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="md:col-span-2 bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-6">
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="container mx-auto px-6 max-w-4xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Hướng dẫn Cài đặt & Sử dụng</h2>
-            <p className="text-slate-600">Làm theo 2 bước đơn giản dưới đây để tự động hóa hoàn toàn</p>
+            <p className="text-slate-600">Thực hiện đơn giản theo các bước sau</p>
           </div>
 
           <div className="space-y-12 max-w-2xl mx-auto">
@@ -89,7 +89,17 @@ export default function Home() {
                 <h3 className="text-2xl font-bold">Cài đặt Chrome Extension</h3>
               </div>
               <ol className="list-decimal pl-5 space-y-4 text-slate-700 text-lg">
-                <li>Tải xuống file <code className="bg-slate-200 px-2 py-1 rounded text-sm font-mono text-orange-600">ghn_extension.zip</code></li>
+                <li className="flex items-center flex-wrap gap-2">
+                  Tải xuống file:
+                  <a
+                    href="/ghn_extension.zip"
+                    download
+                    className="inline-flex items-center gap-1.5 bg-orange-100 hover:bg-orange-200 text-orange-700 px-3 py-1.5 rounded-lg text-sm font-bold transition-colors border border-orange-200 shadow-sm"
+                  >
+                    <Download size={16} />
+                    ghn_extension.zip
+                  </a>
+                </li>
                 <li>Giải nén file vào một thư mục cố định trên máy tính của bạn</li>
                 <li>Mở Google Chrome, truy cập vào đường dẫn <code className="bg-slate-200 px-2 py-1 rounded text-sm text-blue-600">chrome://extensions/</code></li>
                 <li>Bật chế độ <strong>Developer mode</strong> (Chế độ dành cho nhà phát triển) ở góc trên bên phải</li>
